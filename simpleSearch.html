@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+        body {
+            background: #f2f2f2;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+        
+        .searchTerm {
+            width: 100%;
+            border: 3px solid #00B4CC;
+            border-right: none;
+            padding: 5px;
+            height: 20px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+        
+        .searchTerm:focus {
+            color: #00B4CC;
+        }
+        
+        .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .wrap {
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        footer {
+            font-weight: 300;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2rem;
+            background: var(--main-gray);
+            border-top: 4px solid var(--main-red);
+        }
+        
+        footer>p {
+            margin: 2rem;
+        }
+        
+        footer i {
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 28.75em) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+                position: fixed;
+            }
+        }
+        
+        .buttonA {
+            display: inline-block;
+            background-color: #7b38d8;
+            border-radius: 10px;
+            border: 4px double #cccccc;
+            color: #eeeeee;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            width: 180px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .buttonA span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .buttonA span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .buttonA:hover {
+            background-color: #f7c2f9;
+        }
+        
+        .buttonA:hover span {
+            padding-right: 25px;
+        }
+        
+        .buttonA:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="search">
+            <input type="text" class="searchTerm" placeholder="What are you looking for?">
+            <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+    </div>
+
+    <!-- START FOOTER SECTION -->
+
+    <footer>
+        <p>
+            <b>A Simple Search</b>
+        </p>
+        <p>
+            &copy; Created by Desmond, as a part of the project for the course "Responsive Web Design" taken on
+            <a id="tribute-link" href="https://www.freecodecamp.org/" target="_blank">freecodecamp</a
+      >
+    </p>
+
+    <a href="index.html"><button class="buttonA" ; style="float: right;">Portfolio Home</button></a>
+    </footer>
+
+    <!-- END FOOTER SECTION -->
+</body>
+
+</html>
